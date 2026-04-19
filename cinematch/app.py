@@ -4,7 +4,6 @@ from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from cinematch.routers import movies, watchlists
@@ -36,6 +35,6 @@ app.mount("/static", StaticFiles(directory=_static), name="static")
 
 
 @app.get("/", tags=["Health"], include_in_schema=False)
-def root() -> FileResponse:
-    """Serve the CineMatch frontend."""
-    return FileResponse(_static / "index.html")
+def root() -> dict[str, str]:
+    """Health check endpoint."""
+    return {"status": "ok"}
