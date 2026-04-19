@@ -151,8 +151,7 @@ CI runs both on every push and pull request.
 This project was built with the assistance of Claude (Anthropic). The following were generated with AI:
 
 - Initial project file structure and module layout
-
-**Tools used:** Claude 
+  
 ---
 
 ## Contributor
