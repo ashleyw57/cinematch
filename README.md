@@ -156,7 +156,7 @@ This project was built with the assistance of Claude (Anthropic). The following 
 ---
 
 ## Contributor
-Ashley Wang
+Ashley Wang &
 Michael Zhang
 
 ---
