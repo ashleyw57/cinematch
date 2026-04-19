@@ -151,13 +151,6 @@ CI runs both on every push and pull request.
 This project was built with the assistance of Claude (Anthropic). The following were generated with AI:
 
 - Initial project file structure and module layout
-- All source files (`tmdb_client.py`, `models.py`, `movies.py`, `watchlists.py`, `app.py`, routers)
-- All test files and fixtures
-- `pyproject.toml`, `.gitignore`, CI workflow, and this README
-
-**How we used it:** We described the project requirements (2-person Python library + HTTP API assignment) and the AI generated a complete working codebase. We then reviewed every file, ran the tests, verified the architecture decisions made sense, and made edits where needed.
-
-**What it produced:** A fully functional, tested, linted project meeting all assignment requirements.
 
 **Tools used:** Claude Sonnet via claude.ai
 
