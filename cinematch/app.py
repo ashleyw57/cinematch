@@ -1,7 +1,11 @@
 """CineMatch HTTP API – FastAPI application factory."""
 
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from cinematch.routers import movies, watchlists
 
@@ -27,8 +31,11 @@ app.add_middleware(
 app.include_router(movies.router, prefix="/movies", tags=["Movies"])
 app.include_router(watchlists.router, prefix="/watchlists", tags=["Watchlists"])
 
+_static = Path(__file__).parent / "static"
+app.mount("/static", StaticFiles(directory=_static), name="static")
 
-@app.get("/", tags=["Health"])
-def root() -> dict:
-    """Health check / welcome endpoint."""
-    return {"status": "ok", "message": "Welcome to CineMatch 🎬"}
+
+@app.get("/", tags=["Health"], include_in_schema=False)
+def root() -> FileResponse:
+    """Serve the CineMatch frontend."""
+    return FileResponse(_static / "index.html")
