@@ -152,7 +152,12 @@ This project was built with the assistance of Claude (Anthropic). The following 
 
 - Initial project file structure and module layout
 
-**Tools used:** Claude Sonnet via claude.ai
+**Tools used:** Claude 
+---
+
+## Contributor
+Ashley Wang
+Michael Zhang
 
 ---
 
@@ -161,4 +166,4 @@ This project was built with the assistance of Claude (Anthropic). The following 
 1. Create a branch from `main`
 2. Make changes and add tests
 3. Run `ruff check .` and `pytest` — both must pass
-4. Open a pull request and request review from your partner
+4. Open a pull request and request review 
